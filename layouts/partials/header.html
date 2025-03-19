@@ -53,7 +53,7 @@
 	<!-- Mathjax support -->
 	{{- if .Site.Params.mathjax | default false -}}
 		<script type="text/javascript"
-		{{ if .Site.Params.useCDN | default false -}}
+		{{- if .Site.Params.useCDN | default false -}}
 		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 		{{- else -}}
 		src="{{ absURL "js/MathJax.js" }}">

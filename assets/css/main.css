@@ -1,10 +1,10 @@
 /* Markdown */
 :root{
---maincolor: red;
---bordercl:rebeccapurple;
---callouctcolor:dodgerblue;
+--maincolor: rgb(65, 118, 209);
+--bordercl:rgb(65, 118, 209);
+--calloutcolor:rgb(110, 223, 82);
 --hovercolor:navy;
---darkMaincolor: #50fa7b;
+--darkMaincolor: #f5d431;
 }
 html {
   color: #232333;
@@ -67,7 +67,6 @@ ul > li::before {
 
 /* Images */
 img {
-  border: 3px solid #ececec;
   max-width: 100%;
 }
 
@@ -78,9 +77,9 @@ figure {
   max-width: 100%;
 }
 
-figure img {
-  max-height: 500px;
-}
+/* figure img {
+  max-height: 600px;
+} */
 
 @media screen and (min-width: 600px) {
   figure {
@@ -149,12 +148,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before { color: var(--maincolor); content: '# '; }
+/* h1::before { color: var(--maincolor); content: '# '; }
 h2::before { color: var(--maincolor); content: '## '; }
 h3::before { color: var(--maincolor); content: '### '; }
 h4::before { color: var(--maincolor); content: '#### '; }
 h5::before { color: var(--maincolor); content: '##### '; }
-h6::before { color: var(--maincolor); content: '###### '; }
+h6::before { color: var(--maincolor); content: '###### '; } */
 
 .meta {
   color: #999;
@@ -190,7 +189,7 @@ h6::before { color: var(--maincolor); content: '###### '; }
 footer {
   display: flex;
   align-items: center;
-  border-top: 0.4rem dotted var(--bordercl);
+  border-top: 0.3rem dashed var(--bordercl);
   padding: 2rem 0rem;
   margin-top: 2rem;
 }
@@ -198,6 +197,10 @@ footer {
   display: flex;
   align-items: center;
   border-bottom: none;
+  padding: 0.8rem;
+}
+.social_icons {
+  font-size:x-large;
 }
 .border {
   margin-left: 0.5rem;
@@ -221,7 +224,6 @@ time {
 article .title {
   margin-bottom: 1em;
 }
-
 
 /* Callout */
 .callout {
@@ -398,4 +400,17 @@ table td{
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust space between text and image */
+}
+.bio-text {
+  flex: 1;
+}
+.bio-image img {
+  max-width: 200px; /* Adjust image size */
+  border-radius: 50%; /* Optional: makes it circular */
 }
